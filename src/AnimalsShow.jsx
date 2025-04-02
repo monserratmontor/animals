@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 import bird from './assets/svg/bird.svg'
-import dog from './assets/svg/bird.svg'
-import cat from './assets/svg/bird.svg'
-import cow from './assets/svg/bird.svg'
-import gastor from './assets/svg/bird.svg'
-import heart from './assets/svg/bird.svg'
-import horse from './assets/svg/bird.svg'
+import dog from './assets/svg/dog.svg'
+import cat from './assets/svg/cat.svg'
+import cow from './assets/svg/cow.svg'
+import gastor from './assets/svg/gastor.svg'
+import heart from './assets/svg/heart.svg'
+import horse from './assets/svg/horse.svg'
 
 import './AnimalsShow.css'
 
