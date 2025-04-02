@@ -1,14 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import{ useState} from'react'
+
+import'./App.css'
+
+import AnimalsShow from './AnimalsShow'
+
+function getRandomAnimal(){
+  const animals = ['cat', 'bird', 'dog', 'gastor', 'horse']
+
+  return animals[Math.floor(Math.random()* animals.length)]
+}
+
+console.log(getRandomAnimal())
 
 function App() {
+
+  const[animals, setAnimals] = useState([])
+
+  const handleClick = () => {
+    setAnimals([...animals, getRandomAnimal()])
+  }
+
+  const renderAnimals = animals.map((animal, index) =>{
+    return <AnimalsShow type={animal} key={index}/>
+  })
  
   return (
-    <>
-     <h1>Animals App</h1>
-    </>
+    <div className='app'>
+      <button onClick={handleClick}>Add animal</button>
+      <div className='animals-list'>
+        {renderAnimals}
+    </div>
+    </div>
   )
 }
 
