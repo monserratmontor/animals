@@ -4,7 +4,7 @@ import bird from './assets/svg/bird.svg'
 import dog from './assets/svg/dog.svg'
 import cat from './assets/svg/cat.svg'
 import cow from './assets/svg/cow.svg'
-import gastor from './assets/svg/gastor.svg'
+import gator from './assets/svg/gator.svg'
 import heart from './assets/svg/heart.svg'
 import horse from './assets/svg/horse.svg'
 
@@ -15,35 +15,39 @@ const svgMap = {
     dog,
     cat,
     cow,
-    gastor,
+    gator,
     horse
 }
 
 function AnimalsShow({type}){
-    const [clicks, setClicks] = useState(0)
-
+    const [click, setCliks] = useState(0)
+    
     const handleClick = () => {
-        setClicks(clicks + 1)
+        setCliks(click + 1)
+
     }
 
     return(
         <div
         onClick={handleClick}
-        className="animals-show"
-        >
+        className="animal-show"
+>
     <img
     src={svgMap[type]}
     alt="animal"
-    className="heart"
+    className="animal"
     />
     <img
     src={heart}
     alt="heart"
-    style={{ width: 10 + 10 * clicks + 'px'}}
+    style={{width: 10 +10 * click + 'px'}}
     className="heart"
     />
-    </div>
+
+</div>
     )
+ 
+
 }
 
 export default AnimalsShow
